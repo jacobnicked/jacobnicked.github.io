@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+.p {
+	font-family: Arial;
+}
+
 .navbar {
     background-color: #333;
     overflow: hidden;
