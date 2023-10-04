@@ -6,7 +6,12 @@ body {
 
 p {
 	font-family: Arial;
-	padding-left: 20px;
+}
+
+.title {
+	font-family: Arial;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .navbar {
@@ -28,16 +33,19 @@ p {
 		float: right;
 	}
 
-.text1 {
-	padding-left: 20px;
-	padding-right: 20px;
-	font-family: Arial;
-	font-size: 15px;
-}
-
 .footer {
+	background-color:blanchedalmond;
+	overflow: hidden;
 	padding: 20px;
 	font-family: Arial;
 	font-size: 15px;
 	text-align: center;
+}
+
+.maintext {
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 75px;
+	padding-right: 75px;
 }

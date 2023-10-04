@@ -1,0 +1,128 @@
+body {
+    text-align: left;
+    font-size: 17px;
+    margin: 80px;
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+.mainpic {
+    width: 800px; 
+    height: 300px; 
+    object-fit: cover;
+    object-position: 50% 25%;
+    width: 100%;
+    margin-top: -45px;
+}
+
+.zaralarsson {
+    font-family: Courier New;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.informacjaostronie {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Helvetica;
+  margin-left: 20px;
+}
+
+.pasekgorny {
+    background-color: rgb(150, 110, 150);
+    overflow: hidden;
+  }
+  
+  .pasekgorny a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .pasekgorny a:hover {
+    background-color: rgb(175, 150, 175);
+    color: white;
+  }
+  
+  .pasekgorny a.active {
+    background-color: rgb(150, 75, 150);
+    color: white;
+  }
+
+p {
+    font-family: Arial;
+}
+
+.zyciorystytul {
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+.canttamehertytul {
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+.canttameherzdj{
+    margin-left: 20px;
+}
+
+.zaryeratytul {
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+.Vogue {
+    margin: auto;
+}
+
+.Vogue2{
+    display: block;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.zarabowlandfortune{
+    font-size: 20px;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.endoftimetytul {
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+.apartofyoutytul {
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+a {
+    color: darkorchid;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+a:hover {
+    color: gray;
+}
+
+.footer {
+	padding: 20px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+}
