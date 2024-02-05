@@ -1,7 +1,7 @@
-<h1>My website</h1>
+# My website
 <p>I have always wanted to have my own website that is available to everyone. Here it is!</p>
 <p>Expected final release: 2024 - 2025</p>
-<p>The page: <a href="https://jacobnicked.github.io">click here!</a></p>
+<p>The website: <a href="https://jacobnicked.github.io">click here!</a></p>
 <hr>
 <a href="https://linktr.ee/jacobnicked/">My links</a>
 <hr>
