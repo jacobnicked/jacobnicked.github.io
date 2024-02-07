@@ -33,6 +33,18 @@ p {
 		float: right;
 	}
 
+.top {
+	display: flex;
+	align-items: left;
+}
+
+.logo {
+	margin-right: 10px;
+	height: auto;
+	width: 50px;
+}
+
+
 .footer {
 	background-color:blanchedalmond;
 	overflow: hidden;
