@@ -1,23 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
-	font-family: Arial;
+.custom-body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    padding: 0;
+	margin-top: 0px;
 }
 
 .title {
 	font-family: Arial;
-	padding-left: 25px;
-	padding-right: 25px;
+	margin-left: 20px;
 }
 
+p {
+	font-family: Arial;
+	font-size: 20px;	
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.pfp {
+	height: 50px;
+	width: auto;
+	/*margin-left: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;*/
+}
+
+/* Navigation bar */
 .navbar {
     background-color: #333;
     overflow: hidden;
     width: 100%;
+	/*margin-left: 15px;
+	margin-right: 15px;*/
 }
 
 	.navbar a {
@@ -33,17 +55,14 @@ p {
 		float: right;
 	}
 
-.top {
-	display: flex;
-	align-items: center;
+.main {
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 75px;
+	padding-right: 75px;
 }
-
-.pfp {
-	margin-left: 25px;
-	margin-right: 25px;
-	height: 50px;
-	width: auto;
-}
+/* The end of navbar */
 
 .footer {
 	background-color:blanchedalmond;
@@ -54,18 +73,3 @@ p {
 	text-align: center;
 }
 
-.maintext {
-	text-align: left;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-left: 75px;
-	padding-right: 75px;
-}
-
-.mytweet {
-	text-align: left;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-left: 75px;
-	padding-right: 75px;
-}
