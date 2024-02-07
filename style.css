@@ -35,15 +35,15 @@ p {
 
 .top {
 	display: flex;
-	align-items: left;
+	align-items: center;
 }
 
 .pfp {
-	margin-right: 10px;
+	margin-left: 25px;
+	margin-right: 25px;
 	height: 50px;
 	width: auto;
 }
-
 
 .footer {
 	background-color:blanchedalmond;
