@@ -103,32 +103,31 @@ main {
 		color: darkslategray;
 	}
 
-	/*VENUS*/
+	/* VENUS */
 	.VENUS {
-		font-family: 'Cinzel';
+		font-family: "Cinzel";
 		font-weight: bold;
-		float: left;
+		/* float: left; removed for flexbox or grid */
 		font-size: 105%;
 	}
-
+	
 		.VENUS h3 {
 			font-weight: bolder;
 			font-size: 120%;
 		}
-
+		
 		.VENUS_thecover {
 			max-height: 240px;
 			max-width: auto;
 			border-radius: 2%;
-			margin-left: 15%;
+			margin-left: 0; /* Remove margin on smaller screens */
 		}
 
-	/*article 2*/
-	.loremipsum {
-		float: right;
-	}
-/*The end of the articles*/
-
+		/*article 2*/
+		.loremipsum {
+			float: right;
+		}
+	/*The end of the articles*/
 
 
 footer {
@@ -142,3 +141,39 @@ footer {
 	font-weight: bold;
 	color: white;
 }
+
+/* Media Queries */
+
+/* Tablet Landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.articles-container {
+	  flex-wrap: wrap; /* Allow wrapping on tablets */
+	  justify-content: space-evenly; /* Distribute articles evenly */
+	  margin-left: auto;
+	  margin-right: auto; /* Center articles on the page */
+	}
+  
+	article {
+	  width: calc(33% - 20px); /* Adjust width for 3 columns */
+	}
+  }
+  
+  /* Tablet Portrait (up to 768px) */
+  @media (max-width: 768px) {
+	.title {
+	  margin-left: 10px;
+	}
+  
+	.articles-container {
+	  flex-direction: column; /* Stack articles vertically */
+	}
+  
+	article {
+	  width: 100%; /* Make each article full width */
+	}  
+  
+	.VENUS_thecover {
+		margin-left: 0; /* Center image on mobile */
+		/*margin-bottom: 20px;*/
+	}
+  }
