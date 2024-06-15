@@ -1,14 +1,9 @@
-body {
+* {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color:rgb(255, 225, 225);
-	min-height: 100vh;
-	position: relative
 }
 
-.custom-body {
-    margin: 15px;
-    padding: 0;
-	margin-top: 0px;
+body {
+	background-color:rgb(255, 225, 225);
 }
 
 .title {
@@ -21,10 +16,10 @@ p {
 	font-size: 22px;	
 }
 
-.top {
+header {
 	display: flex;
 	align-items: center;
-	margin-bottom: 10px;
+	margin: 15px;
 }
 
 .pfp {
@@ -40,10 +35,9 @@ p {
 .navbar {
     background-color: #333;
     overflow: hidden;
-    width: 100%;
+    width: auto;
 	border-radius: 5px;
-	/*margin-left: 15px;
-	margin-right: 15px;*/
+	margin: 0 15px 0 15px;
 }
 
 	.navbar a {
@@ -68,78 +62,19 @@ main {
 	padding-right: 75px;
 }
 
-/* Articles */
-.articles-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+a {
+	text-decoration: none;
+	color: darkslategray;
 }
 
-	/*Article*/
-	article {
-		background-color: #ffffff;
-		padding: 25px;
-		margin-bottom: 10px;
-		border-radius: 10px;
-		width: 45%;
-	}
-
-		/*article:last-child {
-			margin-bottom: 0;
-		}*/
-
-		article h3 {
-			margin-top: 5px;
-		}
-		
-		article p {
-			margin-top: 1px;
-			font-size: 18px;
-		}
-	/* The end of article */
-
-	a {
-		text-decoration: none;
-		color: darkslategray;
-	}
-
-	/* VENUS */
-	.VENUS {
-		font-family: "Cinzel";
-		font-weight: bold;
-		/* float: left; removed for flexbox or grid */
-		font-size: 105%;
-	}
-	
-		.VENUS h3 {
-			font-weight: bolder;
-			font-size: 120%;
-		}
-		
-		.VENUS_thecover {
-			max-height: 240px;
-			max-width: auto;
-			border-radius: 2%;
-			margin-left: 0; /* Remove margin on smaller screens */
-		}
-
-		/*article 2*/
-		.loremipsum {
-			float: right;
-		}
-	/*The end of the articles*/
-
-
 footer {
-	position: absolute;
-	left: 0;
-	right: 0;
 	background-color: darkslategray;
 	padding: 25px;
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace;
 	font-weight: bold;
 	color: white;
+	clear: both;
 }
 
 /* Media Queries */
@@ -171,9 +106,4 @@ footer {
 	article {
 	  width: 100%; /* Make each article full width */
 	}  
-  
-	.VENUS_thecover {
-		margin-left: 0; /* Center image on mobile */
-		/*margin-bottom: 20px;*/
-	}
   }
