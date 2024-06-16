@@ -4,6 +4,7 @@
 
 body {
 	background-color:rgb(255, 225, 225);
+	margin: 0;
 }
 
 .title {
@@ -22,25 +23,27 @@ header {
 	margin: 15px;
 }
 
-.pfp {
+#pfp {
 	max-height: 50px;
 	max-width: auto;
 	border-radius: 5px;
+	margin-left: 15px;
 	/*margin-left: 15px;
 	margin-top: 15px;
 	margin-bottom: 15px;*/
 }
 
 /* Navigation bar */
-.navbar {
+#navbar {
     background-color: #333;
     overflow: hidden;
     width: auto;
 	border-radius: 5px;
-	margin: 0 15px 0 15px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
-	.navbar a {
+	#navbar a {
 		float: left;
 		font-size: 15px;
 		color: white;
@@ -49,7 +52,7 @@ header {
 		text-decoration: none;
 	}
 
-	.navbar #github-btn {
+	#navbar #github-btn {
 		float: right;
 	}
 /* The end of navbar */
@@ -60,6 +63,7 @@ main {
 	padding-bottom: 25px;
 	padding-left: 75px;
 	padding-right: 75px;
+	height: 50%;
 }
 
 a {
@@ -71,9 +75,11 @@ footer {
 	background-color: darkslategray;
 	padding: 25px;
 	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	color: white;
+	margin: 0;
 	clear: both;
 }
 
