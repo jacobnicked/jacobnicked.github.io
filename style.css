@@ -8,7 +8,7 @@ body {
 }
 
 .title {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	margin-left: 20px;
 }
 
@@ -65,8 +65,8 @@ main {
 	text-align: left;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	padding-left: 75px;
-	padding-right: 75px;
+	padding-left: 15%;
+	padding-right: 15%;
 	height: auto;
 
 }
@@ -126,68 +126,70 @@ footer {
 	clear: both;
 }
 
+/* Fixing/improving responsiveness*/
 /* Media Queries */
-
-/* Tablet Landscape (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-	#smbuttons {
-		padding-left: 15%;
-		padding-right: 15%
-	}
-  }
   
   /* Tablet Portrait (up to 768px) */
   @media (max-width: 768px) {
 	#title {
 	  margin-left: 10px;
-	}
-
-	#main {
-		padding-left: 3%;
-		padding-right: 3%;
+	  font-size: 45%;
 	}
 
 	#smbuttons {
-		padding-left: 3%;
-		padding-right: 3%;
+		padding-left: 2%;
+		padding-right: 2%;
 	}
   }
 
   /* Social media buttons */
-  @media only screen and (max-width: 768px) {
-	/* Styles for screens smaller than 768px (e.g., tablets) */
-	#smbuttons a {
-	  font-size: 14px; /* Adjust font size for smaller screens */
+  @media only screen and (max-width: 600px) {
+	header {
+		padding: 2%;
 	}
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
-	/* Styles for screens between 768px and 992px (e.g., iPads) */
-	#smbuttons a {
-	  /* Optional adjustments for medium-sized screens */
-	  padding: 2%;
-	  font-size: 5px;
+
+	header h2 {
+		font-size: 125%;
 	}
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1024px) {
-	/* Styles for screens wider than 992px (e.g., desktops) */
-	#main {
-		padding-left: 3%;
-		padding-right: 3%;
+
+	#welcome {
+		font-size: 140%;
 	}
 
 	#smbuttons {
-		padding-left: 3%;
-		padding-right: 3%;
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+
+	#smbuttons span {
+	  	font-size: 80%;
+	}
+
+	#smbuttons img {
+		height: 15px;
+		width: auto;
+	}
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 1024px) {
+	#smbuttons {
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 	
 	#smbuttons a {
-	  font-size: 16px; /* Increase font size for larger screens (optional) */
+	  font-size: 16%; /* Increase font size for larger screens (optional) */
 	}
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1050px) {
+	#smbuttons {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+  }
+
+  @media only screen and (min-width: 1050px) and (max-width: 1280px) {
 	#smbuttons {
 		padding-left: 15%;
 		padding-right: 15%;
