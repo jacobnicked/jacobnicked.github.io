@@ -7,12 +7,6 @@ body {
 	margin: 0;
 }
 
-#title {
-	font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	margin-left: 1.5%;
-	font-size: 170%;
-}
-
 p {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 20px;	
@@ -21,8 +15,17 @@ p {
 header {
 	display: flex;
 	align-items: center;
-	padding: 1.75%;
-	margin: 0;
+	justify-content: center;
+	padding: 3%;
+	width: auto;
+	text-align: center;
+}
+
+#title {
+	font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	font-size: 170%;
 }
 
 #pfp {
@@ -59,29 +62,26 @@ header {
 /* The end of navbar */
 
 main {
-	border-top: 1px solid lightslategray;
 	text-align: left;
-	padding: 5% 10% 5% 10%;
+	/*padding: 5% 10% 5% 10%;*/
+	padding: 8%;
 	height: auto;
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
-	#welcome {
-		text-align: center; 
-		font-family: 'Product Sans', google-sans;
-		font-size: 240%;
-	}
 
 	#smbuttons {
 		align-items: center;
 		display: flex;
         flex-wrap: wrap;
 		justify-content: center;
-        width: 45%;
-		height: 95%;
+        width: auto;
+		height: 100%;
 		grid-gap: 10px;
-		width: auto;
-		padding-left: 25%;
-		padding-right: 25%;
+		padding-left: 20%;
+		padding-right: 20%;
 	}
 
 	#smbuttons a {
@@ -139,41 +139,29 @@ footer {
 
 /* Fixing/improving responsiveness*/
 /* Media Queries */
-  
-  /* Tablet Portrait (up to 768px) */
-  @media (max-width: 768px) {
-	#title {
-	  margin-left: 4%;
-	  font-size: 140%;
-	}
-
   /* Social media buttons */
   @media only screen and (max-width: 600px) {
 	#title {
-		margin-left: 4%;
-		font-size: 120%;
+		margin-left: 6%;
+		font-size: 125%;
 	  }
 	
 	header {
 		display: flex;
 		align-items: center;
-		padding: 5%;
+		padding: 12%;
 	}
 
 	header #pfp {
-		max-height: 55px;
+		max-height: 75px;
 	}
 
-	header h2 {
-		font-size: 120%;
-	}
-
-	#welcome {
+	#title {
 		font-size: 140%;
 	}
 
 	main {
-		padding: 6%;
+		padding: 5%;
 	}
 
 	#smbuttons {
@@ -214,10 +202,6 @@ footer {
 			font-size: 120%;
 		}
 
-		#welcome {
-			font-size: 120%;
-		}
-
 		main {
 			padding: 2%;
 		}
@@ -239,32 +223,32 @@ footer {
 			width: auto;
 		}
 	}
-
+  
   /*----------------------------------------*/
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
 	header {
 		display: flex;
 		align-items: center;
-		padding: 4%;
+		padding: 15%;
 	}
 
 	header #pfp {
-		max-height: 60px;
+		max-height: 70px;
 	}
 
-	header h2 {
-		font-size: 130%;
-	}
-
-	#welcome {
-		font-size: 150%;
+	#title {
+		font-size: 125%;
+		margin-left: 25px;
 	}
 
 	main {
+		margin: auto;
 		padding: 15%;
 	}
 
 	#smbuttons {
+		max-width: 100%;
+		margin: auto;
 		padding: 0;
 	}
 
@@ -282,11 +266,11 @@ footer {
 	}
   }
 
-  @media only screen and (min-width: 600px) and (orientation: landscape) {
+  @media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
 	header {
 		display: flex;
 		align-items: center;
-		padding: 4%;
+		padding: 3%;
 	}
 
 	header #pfp {
@@ -295,10 +279,6 @@ footer {
 
 	header h2 {
 		font-size: 120%;
-	}
-
-	#welcome {
-		font-size: 140%;
 	}
 
 	main {
@@ -324,31 +304,32 @@ footer {
   }
 
 /*--------------------------------------*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
 	header {
 		display: flex;
 		align-items: center;
-		padding: 4%;
+		padding: 10%;
 	}
 
 	header #pfp {
-		max-height: 60px;
+		max-height: 90px;
 	}
 
-	header h2 {
-		font-size: 130%;
-	}
-
-	#welcome {
-		font-size: 150%;
+	#title {
+		font-size: 190%;
+		margin-left: 3%;
 	}
 
 	main {
-		padding: 14%;
+		padding: 20% 16% 20% 16%;
+		height: auto;
+		width: auto;
 	}
 
 	#smbuttons {
 		padding: 0;
+		height: auto;
+		width: auto;
 	}
 
 	#smbuttons a {
@@ -364,9 +345,87 @@ footer {
 		width: auto;
 	}
 }
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
-/*@media only screen and (min-width: 992px) {
-	
-}*/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	header {
+		display: flex;
+		align-items: center;
+		padding: 6%;
+	}
+
+	header #pfp {
+		max-height: 80px;
+	}
+
+	#title {
+		font-size: 170%;
+		margin-left: 25px;
+	}
+
+	main {
+		padding: 7% 20% 7% 20%;
+		height: auto;
+		width: auto;
+	}
+
+	#smbuttons {
+		padding: 0;
+		height: auto;
+		width: auto;
+	}
+
+	#smbuttons a {
+		padding: 1.75%;
+	}
+
+	#smbuttons span {
+	  	font-size: 120%;
+	}
+
+	#smbuttons img {
+		height: 35px;
+		width: auto;
+	}
+}
+/*---------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+	header {
+		display: flex;
+		align-items: center;
+		padding: 4%;
+	}
+
+	header #pfp {
+		max-height: 60px;
+	}
+
+	#title {
+		font-size: 130%;
+	}
+
+	main {
+		padding: 3% 25% 3% 25%;
+		height: auto;
+		width: auto;
+	}
+
+	#smbuttons {
+		padding: 0;
+		height: auto;
+		width: auto;
+	}
+
+	#smbuttons a {
+		padding: 1.75%;
+	}
+
+	#smbuttons span {
+	  	font-size: 120%;
+	}
+
+	#smbuttons img {
+		height: 32px;
+		width: auto;
+	}
+}
