@@ -1,88 +1,63 @@
 * {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+	color: var(--text)
 }
 
+:root {
+	--text: #000;
+	--bg: rgb(205, 205, 205);
+  }
+
 body {
-	background-color:rgb(205, 205, 205);
-	margin: 0;
+    background-color: var(--bg);
+    margin: 0;
 }
 
 p {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 20px;	
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;  
 }
 
 header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 3%;
-	width: auto;
-	text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    width: auto;
+    text-align: center;
 }
 
 #title {
-	font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	margin-left: 1.5%;
-	margin-right: 1.5%;
-	font-size: 170%;
+    font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    font-size: 170%;
 }
 
 #pfp {
-	max-height: 70px;
-	max-width: auto;
-	border-radius: 5px;
+    max-height: 70px;
+    max-width: auto;
+    border-radius: 5px;
 }
-
-/* Navigation bar */
-/*#navbar {
-    background-color: #333;
-    overflow: hidden;
-    width: auto;
-	border-radius: 5px;
-	margin-left: 3%;
-	margin-right: 3%;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-	#navbar a {
-		float: left;
-		font-size: 17px;
-		color:aquamarine;
-		text-align: center;
-		padding: 15px 25px;
-		text-decoration: none;
-		font-weight: 550;
-	}
-
-	#navbar a:hover {
-		background-color:dimgray;
-	}*/
-/* The end of navbar */
 
 main {
-	text-align: left;
-	/*padding: 5% 10% 5% 10%;*/
-	padding: 8%;
-	height: auto;
-	width: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    text-align: center;
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-	#smbuttons {
-		align-items: center;
-		display: flex;
-        flex-wrap: wrap;
-		justify-content: center;
-        width: auto;
-		height: 100%;
-		grid-gap: 10px;
-		padding-left: 20%;
-		padding-right: 20%;
-	}
+#smbuttons {
+    align-items: center;
+	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+	height: 100%;
+    gap: 10px;
+}
 
 	#smbuttons a {
 		display: flex;
@@ -91,15 +66,20 @@ main {
 		background-color: rgb(185, 185, 185);
 		border: solid;
 		border-radius: 10px;
-		border-color:darkslategray;
+		border-color: darkslategray;
 		padding: 1.5%;
-		width: auto;
+		text-align: center;
+		color: var(--text);
 	}
 
 	#smbuttons img {
 		max-height: 35px;
 		width: auto;
-		float: left;
+		margin-right: 10px;
+	}
+
+	#smbuttons .bsky {
+		filter: brightness(0);
 	}
 
 	#smbuttons span {
@@ -107,325 +87,316 @@ main {
 		font-weight: 600;
 		font-size: 135%;
 		color: black;
-		float: right;
-		padding-left: 10px;
 	}
 
 a {
-	text-decoration: none;
-	color: darkslategray;
+    text-decoration: none;
+    color: darkslategray;
 }
 
 #note {
-	background-color: yellow;
-	padding: 15px;
-	text-align: center;
-	border-top: 5px dashed black;
-	border-bottom: 5px dashed black;
-	clear: both;
+    background-color: yellow;
+    padding: 15px;
+    text-align: center;
+    border-top: 5px dashed black;
+    border-bottom: 5px dashed black;
+    clear: both;
 }
+
+	#note span {
+		color: var(--text);
+	}
 
 footer {
-	background-color: darkslategray;
-	padding: 25px;
-	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: normal;
-	color: white;
-	clear: both;
+    background-color: darkslategray;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    color: white;
+    clear: both;
 }
 
-/*padding: top right bottom left*/
-
-/* Fixing/improving responsiveness*/
-/* Media Queries */
-  /* Social media buttons */
-  @media only screen and (max-width: 600px) {
-	#title {
-		margin-left: 6%;
-		font-size: 125%;
-	  }
-	
-	header {
-		display: flex;
-		align-items: center;
-		padding: 12%;
+	footer span {
+		color: white;
 	}
 
-	header #pfp {
-		max-height: 75px;
-	}
-
-	#title {
-		font-size: 140%;
-	}
-
-	main {
-		padding: 5%;
-	}
-
-	#smbuttons {
-		padding: 0;
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+	:root {
+	  --text: #fff;
+	  --bg: rgb(35, 35, 35);
 	}
 
 	#smbuttons a {
-		padding: 2%;
+		background-color: darkslategray;
+		border: 2px solid darkgray;
 	}
 
 	#smbuttons span {
-	  	font-size: 96%;
+		color: var(--text);
 	}
 
 	#smbuttons img {
-		height: 18px;
-		width: auto;
+		filter: invert();
+	}
+
+	#smbuttons .bsky {
+		filter: brightness(100);
+	}
+
+	#note span {
+		color: black;
 	}
   }
 
-	@media only screen and (max-width: 600px) and (orientation: landscape) {
-		#title {
-			margin-left: 4%;
-			font-size: 100%;
-		}
-		
-		header {
-			display: flex;
-			align-items: center;
-			padding: 2%;
-		}
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+    #title {
+        margin-left: 6%;
+        font-size: 125%;
+    }
 
-		header #pfp {
-			max-height: 55px;
-		}
+    header {
+        display: flex;
+        align-items: center;
+        padding: 12%;
+    }
 
-		header h2 {
-			font-size: 120%;
-		}
+    header #pfp {
+        max-height: 75px;
+    }
 
-		main {
-			padding: 2%;
-		}
+    #title {
+        font-size: 140%;
+    }
 
-		#smbuttons {
-			padding: 0;
-		}
+    main {
+        padding: 5%;
+    }
 
-		#smbuttons a {
-			padding: 2%;
-		}
+    #smbuttons a {
+        padding: 2%;
+    }
 
-		#smbuttons span {
-			font-size: 96%;
-		}
+    #smbuttons span {
+        font-size: 96%;
+    }
 
-		#smbuttons img {
-			height: 18px;
-			width: auto;
-		}
-	}
-  
-  /*----------------------------------------*/
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
-	header {
-		display: flex;
-		align-items: center;
-		padding: 15%;
-	}
+    #smbuttons img {
+        height: 18px;
+    }
+}
 
-	header #pfp {
-		max-height: 70px;
-	}
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+    #title {
+        margin-left: 4%;
+        font-size: 100%;
+    }
 
-	#title {
-		font-size: 125%;
-		margin-left: 25px;
-	}
+    header {
+        display: flex;
+        align-items: center;
+        padding: 2%;
+    }
 
-	main {
-		margin: auto;
-		padding: 15%;
-	}
+    header #pfp {
+        max-height: 55px;
+    }
 
-	#smbuttons {
-		max-width: 100%;
-		margin: auto;
-		padding: 0;
-	}
+    header h2 {
+        font-size: 120%;
+    }
 
-	#smbuttons a {
-		padding: 1.75%;
-	}
+    main {
+        padding: 2%;
+    }
 
-	#smbuttons span {
-	  	font-size: 120%;
-	}
+    #smbuttons a {
+        padding: 2%;
+    }
 
-	#smbuttons img {
-		height: 22px;
-		width: auto;
-	}
-  }
+    #smbuttons span {
+        font-size: 96%;
+    }
 
-  @media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
-	header {
-		display: flex;
-		align-items: center;
-		padding: 3%;
-	}
+    #smbuttons img {
+        height: 18px;
+    }
+}
 
-	header #pfp {
-		max-height: 50px;
-	}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        padding: 15%;
+    }
 
-	header h2 {
-		font-size: 120%;
-	}
+    header #pfp {
+        max-height: 70px;
+    }
 
-	main {
-		padding: 12%;
-	}
+    #title {
+        font-size: 125%;
+        margin-left: 25px;
+    }
 
-	#smbuttons {
-		padding: 0;
-	}
+    main {
+        margin: auto;
+        padding: 15%;
+    }
 
-	#smbuttons a {
-		padding: 1.75%;
-	}
+    #smbuttons {
+        max-width: 100%;
+        margin: auto;
+        padding: 0;
+    }
 
-	#smbuttons span {
-	  	font-size: 100%;
-	}
+    #smbuttons a {
+        padding: 1.75%;
+    }
 
-	#smbuttons img {
-		height: 22px;
-		width: auto;
-	}
-  }
+    #smbuttons span {
+        font-size: 120%;
+    }
 
-/*--------------------------------------*/
+    #smbuttons img {
+        height: 22px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
+    header {
+        display: flex;
+        align-items: center;
+        padding: 3%;
+    }
+
+    header #pfp {
+        max-height: 50px;
+    }
+
+    header h2 {
+        font-size: 120%;
+    }
+
+    main {
+        padding: 12%;
+    }
+
+    #smbuttons a {
+        padding: 1.75%;
+    }
+
+    #smbuttons span {
+        font-size: 100%;
+    }
+
+    #smbuttons img {
+        height: 22px;
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-	header {
-		display: flex;
-		align-items: center;
-		padding: 10%;
-	}
+    header {
+        display: flex;
+        align-items: center;
+        padding: 10%;
+    }
 
-	header #pfp {
-		max-height: 90px;
-	}
+    header #pfp {
+        max-height: 90px;
+    }
 
-	#title {
-		font-size: 190%;
-		margin-left: 3%;
-	}
+    #title {
+        font-size: 190%;
+        margin-left: 3%;
+    }
 
-	main {
-		padding: 20% 16% 20% 16%;
-		height: auto;
-		width: auto;
-	}
+    main {
+        padding: 20% 16%;
+        height: auto;
+        width: auto;
+    }
 
-	#smbuttons {
-		padding: 0;
-		height: auto;
-		width: auto;
-	}
+    #smbuttons a {
+        padding: 1.75%;
+    }
 
-	#smbuttons a {
-		padding: 1.75%;
-	}
+    #smbuttons span {
+        font-size: 120%;
+    }
 
-	#smbuttons span {
-	  	font-size: 120%;
-	}
-
-	#smbuttons img {
-		height: 22px;
-		width: auto;
-	}
+    #smbuttons img {
+        height: 22px;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-	header {
-		display: flex;
-		align-items: center;
-		padding: 6%;
-	}
+    header {
+        display: flex;
+        align-items: center;
+        padding: 6%;
+    }
 
-	header #pfp {
-		max-height: 80px;
-	}
+    header #pfp {
+        max-height: 80px;
+    }
 
-	#title {
-		font-size: 170%;
-		margin-left: 25px;
-	}
+    #title {
+        font-size: 170%;
+        margin-left: 25px;
+    }
 
-	main {
-		padding: 7% 20% 7% 20%;
-		height: auto;
-		width: auto;
-	}
+    main {
+        padding: 7% 20%;
+        height: auto;
+        width: auto;
+    }
 
-	#smbuttons {
-		padding: 0;
-		height: auto;
-		width: auto;
-	}
+    #smbuttons a {
+        padding: 1.75%;
+    }
 
-	#smbuttons a {
-		padding: 1.75%;
-	}
+    #smbuttons span {
+        font-size: 120%;
+    }
 
-	#smbuttons span {
-	  	font-size: 120%;
-	}
-
-	#smbuttons img {
-		height: 35px;
-		width: auto;
-	}
+    #smbuttons img {
+        height: 35px;
+    }
 }
-/*---------------------------------------------------------------*/
+
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
-	header {
-		display: flex;
-		align-items: center;
-		padding: 4%;
-	}
+    header {
+        display: flex;
+        align-items: center;
+        padding: 4%;
+    }
 
-	header #pfp {
-		max-height: 60px;
-	}
+    header #pfp {
+        max-height: 60px;
+    }
 
-	#title {
-		font-size: 130%;
-	}
+    #title {
+        font-size: 130%;
+    }
 
-	main {
-		padding: 3% 25% 3% 25%;
-		height: auto;
-		width: auto;
-	}
+    main {
+        padding: 3% 25%;
+        height: auto;
+        width: auto;
+    }
 
-	#smbuttons {
-		padding: 0;
-		height: auto;
-		width: auto;
-	}
+    #smbuttons a {
+        padding: 1.5%;
+    }
 
-	#smbuttons a {
-		padding: 1.75%;
-	}
+    #smbuttons span {
+        font-size: 110%;
+    }
 
-	#smbuttons span {
-	  	font-size: 120%;
-	}
-
-	#smbuttons img {
-		height: 32px;
-		width: auto;
-	}
+    #smbuttons img {
+        height: 28px;
+    }
 }
