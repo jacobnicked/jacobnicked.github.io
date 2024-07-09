@@ -7,11 +7,19 @@
 :root {
 	--text: #000;
 	--bg: rgb(205, 205, 205);
-  }
+}
 
-body {
+body, html {
     background-color: var(--bg);
+    width: 100%;
+    height: 100%;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -23,7 +31,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3%;
+    padding: 2%;
     width: auto;
     text-align: center;
 }
@@ -42,52 +50,54 @@ header {
 }
 
 main {
-    text-align: center;
-    padding: 8%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+#smbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
     align-items: center;
     justify-content: center;
 }
 
-#smbuttons {
-    align-items: center;
-	justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-	height: 100%;
-    gap: 10px;
-}
+    #smbuttons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(185, 185, 185);
+        border: solid;
+        border-radius: 10px;
+        border-color: darkslategray;
+        padding: 1.5%;
+        height: auto;
+        text-align: center;
+        color: var(--text);
+    }
 
-	#smbuttons a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: rgb(185, 185, 185);
-		border: solid;
-		border-radius: 10px;
-		border-color: darkslategray;
-		padding: 1.5%;
-		text-align: center;
-		color: var(--text);
-	}
+    #smbuttons img {
+        max-height: 35px;
+        width: auto;
+        margin-right: 10px;
+    }
 
-	#smbuttons img {
-		max-height: 35px;
-		width: auto;
-		margin-right: 10px;
-	}
+    #smbuttons .bsky {
+        filter: brightness(0);
+    }
 
-	#smbuttons .bsky {
-		filter: brightness(0);
-	}
-
-	#smbuttons span {
-		font-family: 'Product Sans';
-		font-weight: 600;
-		font-size: 135%;
-		color: black;
-	}
+    #smbuttons span {
+        font-family: 'Product Sans';
+        font-weight: 600;
+        font-size: 135%;
+        color: black;
+    }
 
 a {
     text-decoration: none;
@@ -100,12 +110,12 @@ a {
     text-align: center;
     border-top: 5px dashed black;
     border-bottom: 5px dashed black;
-    clear: both;
+    width: 100%;
 }
 
-	#note span {
-		color: var(--text);
-	}
+#note span {
+    color: var(--text);
+}
 
 footer {
     background-color: darkslategray;
@@ -117,9 +127,9 @@ footer {
     clear: both;
 }
 
-	footer span {
-		color: white;
-	}
+footer span {
+    color: white;
+}
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
@@ -148,23 +158,23 @@ footer {
 	#note span {
 		color: black;
 	}
-  }
+}
 
 /* Responsiveness */
 @media only screen and (max-width: 600px) {
     #title {
         margin-left: 6%;
-        font-size: 125%;
+        font-size: 120%;
     }
 
     header {
         display: flex;
-        align-items: center;
-        padding: 12%;
+        padding: 10%;
+        height: 100%;
     }
 
     header #pfp {
-        max-height: 75px;
+        max-height: 60px;
     }
 
     #title {
@@ -176,11 +186,11 @@ footer {
     }
 
     #smbuttons a {
-        padding: 2%;
+        padding: 3%;
     }
 
     #smbuttons span {
-        font-size: 96%;
+        font-size: 95%;
     }
 
     #smbuttons img {
@@ -229,7 +239,7 @@ footer {
     header {
         display: flex;
         align-items: center;
-        padding: 15%;
+        padding: 10%;
     }
 
     header #pfp {
@@ -237,13 +247,13 @@ footer {
     }
 
     #title {
-        font-size: 125%;
+        font-size: 135%;
         margin-left: 25px;
     }
 
     main {
         margin: auto;
-        padding: 15%;
+        padding: 5% 10%;
     }
 
     #smbuttons {
@@ -301,7 +311,7 @@ footer {
     header {
         display: flex;
         align-items: center;
-        padding: 10%;
+        padding: 5%;
     }
 
     header #pfp {
@@ -314,7 +324,7 @@ footer {
     }
 
     main {
-        padding: 20% 16%;
+        padding: 1% 15%;
         height: auto;
         width: auto;
     }
@@ -332,26 +342,23 @@ footer {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
     header {
         display: flex;
         align-items: center;
-        padding: 6%;
+        padding: 3%;
     }
 
     header #pfp {
-        max-height: 80px;
+        max-height: 50px;
     }
 
-    #title {
-        font-size: 170%;
-        margin-left: 25px;
+    header h2 {
+        font-size: 120%;
     }
 
     main {
-        padding: 7% 20%;
-        height: auto;
-        width: auto;
+        padding: 15%;
     }
 
     #smbuttons a {
@@ -359,11 +366,43 @@ footer {
     }
 
     #smbuttons span {
-        font-size: 120%;
+        font-size: 100%;
     }
 
     #smbuttons img {
-        height: 35px;
+        height: 22px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    header {
+        display: flex;
+        align-items: center;
+        padding: 3%;
+    }
+
+    header #pfp {
+        max-height: 70px;
+    }
+
+    header h2 {
+        font-size: 150%;
+    }
+
+    main {
+        padding: 25%;
+    }
+
+    #smbuttons a {
+        padding: 1.75%;
+    }
+
+    #smbuttons span {
+        font-size: 100%;
+    }
+
+    #smbuttons img {
+        height: 22px;
     }
 }
 
@@ -371,32 +410,30 @@ footer {
     header {
         display: flex;
         align-items: center;
-        padding: 4%;
+        padding: 3%;
     }
 
     header #pfp {
-        max-height: 60px;
+        max-height: 75px;
     }
 
-    #title {
-        font-size: 130%;
+    header h2 {
+        font-size: 150%;
     }
 
     main {
-        padding: 3% 25%;
-        height: auto;
-        width: auto;
+        padding: auto;
     }
 
     #smbuttons a {
-        padding: 1.5%;
+        padding: 1.75%;
     }
 
     #smbuttons span {
-        font-size: 110%;
+        font-size: 100%;
     }
 
     #smbuttons img {
-        height: 28px;
+        height: 22px;
     }
 }
