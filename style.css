@@ -1,6 +1,5 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 	color: var(--text)
 }
 
@@ -31,20 +30,28 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    padding-top: 5%;
+    padding-bottom: 0;
     width: auto;
     text-align: center;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
 }
 
 #title {
     font-family: 'Trebuchet MS', 'Product Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 1.5%;
     margin-right: 1.5%;
-    font-size: 170%;
+    font-size: 190%;
 }
 
 #pfp {
-    max-height: 70px;
+    max-height: 100px;
     max-width: auto;
     border-radius: 5px;
 }
@@ -55,8 +62,6 @@ main {
     align-items: center;
     flex-grow: 1;
     width: 100%;
-    padding-left: 30%;
-    padding-right: 30%;
 }
 
 #smbuttons {
@@ -66,6 +71,11 @@ main {
     padding: 0;
     align-items: center;
     justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
     #smbuttons a {
@@ -94,8 +104,8 @@ main {
 
     #smbuttons span {
         font-family: 'Product Sans';
-        font-weight: 600;
-        font-size: 135%;
+        font-weight: 550;
+        font-size: 130%;
         color: black;
     }
 
@@ -118,7 +128,6 @@ a {
 }
 
 footer {
-    background-color: darkslategray;
     padding: 25px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -161,16 +170,71 @@ footer span {
 }
 
 /* Responsiveness */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 359px) {
     #title {
-        margin-left: 6%;
-        font-size: 120%;
+        margin-left: 3%;
+        font-size: 60%;
     }
 
     header {
         display: flex;
-        padding: 10%;
-        height: 100%;
+        padding-top: 5%;
+        padding-bottom: 0%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header #pfp {
+        max-height: 50px;
+    }
+
+    #title {
+        font-size: 100%;
+    }
+
+    #smbuttons {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+        #smbuttons a {
+            padding: 3%;
+        }
+
+        #smbuttons span {
+            font-size: 80%;
+        }
+
+        #smbuttons img {
+            height: 18px;
+        }
+
+    footer {
+        padding: 3%;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 599px) {
+    #title {
+        margin-left: 6%;
+        font-size: 130%;
+    }
+
+    header {
+        display: flex;
+        padding-top: 10%;
+        padding-bottom: 0%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     header #pfp {
@@ -181,21 +245,22 @@ footer span {
         font-size: 140%;
     }
 
-    main {
-        padding: 5%;
+    #smbuttons {
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
-    #smbuttons a {
-        padding: 3%;
-    }
+        #smbuttons a {
+            padding: 2.5%;
+        }
 
-    #smbuttons span {
-        font-size: 95%;
-    }
+        #smbuttons span {
+            font-size: 90%;
+        }
 
-    #smbuttons img {
-        height: 18px;
-    }
+        #smbuttons img {
+            height: 18px;
+        }
 }
 
 @media only screen and (max-width: 600px) and (orientation: landscape) {
@@ -207,7 +272,6 @@ footer span {
     header {
         display: flex;
         align-items: center;
-        padding: 2%;
     }
 
     header #pfp {
@@ -215,7 +279,7 @@ footer span {
     }
 
     header h2 {
-        font-size: 120%;
+        font-size: 110%;
     }
 
     main {
@@ -235,43 +299,45 @@ footer span {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
     header {
         display: flex;
         align-items: center;
-        padding: 10%;
+        padding-top: 15%;
+        padding-bottom: 0;
     }
 
     header #pfp {
-        max-height: 70px;
+        max-height: 120px;
     }
 
-    #title {
-        font-size: 135%;
-        margin-left: 25px;
+    header #title {
+        font-size: 250%;
     }
 
     main {
-        margin: auto;
-        padding: 5% 10%;
+        padding: 4%;
     }
 
     #smbuttons {
-        max-width: 100%;
-        margin: auto;
-        padding: 0;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
-    #smbuttons a {
-        padding: 1.75%;
-    }
+        #smbuttons a {
+            padding: 3%;
+        }
 
-    #smbuttons span {
-        font-size: 120%;
-    }
+        #smbuttons span {
+            font-size: 180%;
+        }
 
-    #smbuttons img {
-        height: 22px;
+        #smbuttons img {
+            height: 95px;
+        }
+
+    footer {
+        padding: 10%;
     }
 }
 
@@ -307,42 +373,49 @@ footer span {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     header {
         display: flex;
         align-items: center;
-        padding: 5%;
+        padding-top: 12%;
+        padding-bottom: 0;
     }
 
     header #pfp {
-        max-height: 90px;
+        max-height: 150px;
     }
 
-    #title {
-        font-size: 190%;
-        margin-left: 3%;
+    header #title {
+        font-size: 275%;
     }
 
     main {
-        padding: 1% 15%;
-        height: auto;
-        width: auto;
+        padding: 5%;
     }
 
-    #smbuttons a {
-        padding: 1.75%;
+    #smbuttons {
+        margin-left: 12%;
+        margin-right: 12%;
     }
 
-    #smbuttons span {
-        font-size: 120%;
-    }
+        #smbuttons a {
+            padding: 3%;
+        }
 
-    #smbuttons img {
-        height: 22px;
+        #smbuttons span {
+            font-size: 170%;
+        }
+
+        #smbuttons img {
+            height: 90px;
+        }
+
+    footer {
+        padding: 10%;
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     header {
         display: flex;
         align-items: center;
@@ -374,35 +447,45 @@ footer span {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     header {
         display: flex;
         align-items: center;
-        padding: 3%;
+        padding-top: 25%;
+        padding-bottom: 0;
     }
 
     header #pfp {
-        max-height: 70px;
+        max-height: 175px;
     }
 
-    header h2 {
-        font-size: 150%;
+    header #title {
+        font-size: 275%;
     }
 
     main {
-        padding: 25%;
+        padding: 6%;
     }
 
-    #smbuttons a {
-        padding: 1.75%;
+    #smbuttons {
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
-    #smbuttons span {
-        font-size: 100%;
-    }
+        #smbuttons a {
+            padding: 3%;
+        }
 
-    #smbuttons img {
-        height: 22px;
+        #smbuttons span {
+            font-size: 180%;
+        }
+
+        #smbuttons img {
+            height: 95px;
+        }
+
+    footer {
+        padding: 15%;
     }
 }
 
