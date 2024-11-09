@@ -161,6 +161,10 @@ footer span {
     color: white;
 }
 
+#tut {
+    text-align: left;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -596,7 +600,7 @@ footer span {
         padding-right: 12%;
     }
 
-    #mainpage, #smbuttons, #smbuttons {
+    #smbuttons, #smbuttons {
         display: none;
     }
 }
