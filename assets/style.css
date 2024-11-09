@@ -54,6 +54,7 @@ header {
         background-color: cadetblue;
         border-radius: 8px;
         overflow: hidden;
+        margin: 25px;
     }
 
         #navbar a {
@@ -81,23 +82,24 @@ main {
     margin-bottom: 5%;
     margin-left: 8%;
     margin-right: 8%;
+    font-size: 150%;
 }
 
-#smbuttonsmobile {
+#smbuttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 18px;
     padding: 0;
     align-items: center;
     justify-content: center;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-    #smbuttonsmobile a {
+    #smbuttons a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -111,20 +113,20 @@ main {
         color: var(--text);
     }
 
-    #smbuttonsmobile img {
+    #smbuttons img {
         max-height: 35px;
         width: auto;
         margin-right: 10px;
     }
 
-    #smbuttonsmobile .bsky {
+    #smbuttons .bsky {
         filter: brightness(0);
     }
 
-    #smbuttonsmobile span {
+    #smbuttons span {
         font-family: 'Product Sans';
         font-weight: 550;
-        font-size: 130%;
+        font-size: 120%;
         color: black;
     }
 
@@ -166,20 +168,21 @@ footer span {
 	  --bg: rgb(35, 35, 35);
 	}
 
-	#smbuttonsmobile a {
+    /**/
+    #smbuttons a {
 		background-color: darkslategray;
 		border: 2px solid darkgray;
 	}
 
-	#smbuttonsmobile span {
+	#smbuttons span {
 		color: var(--text);
 	}
 
-	#smbuttonsmobile img {
+	#smbuttons img {
 		filter: invert();
 	}
 
-	#smbuttonsmobile .bsky {
+	#smbuttons .bsky {
 		filter: brightness(100);
 	}
 
@@ -189,33 +192,25 @@ footer span {
 }
 
 /* Responsiveness */
-@media only screen and (min-width: 1200px) {
-    #smbuttonsmobile {
-        display: none;
-    }
-
-    #mobileheader {
+@media only screen and (min-width: 1024px) {
+    #mobilelandscape {
         display: none;
     }
 }
 
 @media only screen and (max-width: 1199px) {
-    #notformobiledevices, #logoandtitle, #navbar, header {
+    #notformobiledevices {
         display: none;
     }
+}
 
+@media only screen and (max-width: 1199px) {
     body, html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow-x: hidden;
         display: flex;
-    }
-
-    #mobileheader {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     header {
@@ -232,45 +227,66 @@ footer span {
 }
 
 @media only screen and (max-width: 359px) {
-    #title {
-        margin-left: 3%;
-        font-size: 60%;
-    }
-
     header {
         display: flex;
         padding-top: 5%;
-        padding-bottom: 0%;
+        padding-bottom: 5%;
         padding-left: auto;
         padding-right: auto;
+        margin: 5%;
         flex-wrap: nowrap;
         align-content: flex-start;
         justify-content: center;
         align-items: center;
     }
 
-    header #pfp {
-        max-height: 50px;
+    #title {
+        font-size: 125%;
+        margin-left: 15px;
     }
 
-    #title {
+    #pfp {
+        max-height: 50px;
+        margin-right: 0;
+    }
+
+    #navbar {
+        margin: 0;
+    }
+
+    #mainpage {
         font-size: 100%;
     }
 
-    #smbuttonsmobile {
-        margin-left: 12%;
-        margin-right: 12%;
+    #navbar a {
+        padding: 12px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 70%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-        #smbuttonsmobile a {
-            padding: 3%;
+    #mainpage h2 {
+        font-size: 150%;
+    }
+
+    #smbuttons {
+        margin-left: 12%;
+        margin-right: 12%;
+        gap: 7px;
+    }
+
+        #smbuttons a {
+            padding: 2.5%;
         }
 
-        #smbuttonsmobile span {
-            font-size: 80%;
+        #smbuttons span {
+            font-size: 75%;
         }
 
-        #smbuttonsmobile img {
+        #smbuttons img {
             height: 18px;
         }
 
@@ -282,14 +298,14 @@ footer span {
 
 @media only screen and (min-width: 360px) and (max-width: 599px) {
     #title {
-        margin-left: 6%;
+        margin-left: 5px;
         font-size: 130%;
     }
 
     header {
         display: flex;
         padding-top: 10%;
-        padding-bottom: 0%;
+        padding-bottom: 10%;
         padding-left: auto;
         padding-right: auto;
         flex-wrap: nowrap;
@@ -299,285 +315,288 @@ footer span {
     }
 
     header #pfp {
-        max-height: 60px;
+        max-height: 55px;
     }
 
-    #title {
-        font-size: 140%;
+    #navbar {
+        margin: 0;
     }
 
-    #smbuttonsmobile {
-        margin-left: 15%;
-        margin-right: 15%;
+    #navbar a {
+        padding: 16px 14px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 70%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-        #smbuttonsmobile a {
+    #smbuttons {
+        margin-left: 6%;
+        margin-right: 6%;
+        gap: 10px;
+    }
+
+        #smbuttons a {
             padding: 2.5%;
         }
 
-        #smbuttonsmobile span {
-            font-size: 90%;
+        #smbuttons span {
+            font-size: 80%;
         }
 
-        #smbuttonsmobile img {
-            height: 18px;
+        #smbuttons img {
+            height: 20px;
         }
 }
 
 @media only screen and (max-width: 600px) and (orientation: landscape) {
-    #title {
-        margin-left: 4%;
-        font-size: 100%;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-    }
-
-    header #pfp {
-        max-height: 55px;
-    }
-
-    header h2 {
-        font-size: 110%;
-    }
-
-    main {
-        padding: 2%;
-    }
-
-    #smbuttonsmobile a {
-        padding: 2%;
-    }
-
-    #smbuttonsmobile span {
-        font-size: 96%;
-    }
-
-    #smbuttonsmobile img {
-        height: 18px;
-    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+    #title {
+        margin-left: 0;
+        font-size: 140%;
+    }
+
     header {
         display: flex;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-top: 15%;
-        padding-bottom: 0;
-    }
-
-    header #pfp {
-        max-height: 120px;
-    }
-
-    header #title {
-        font-size: 250%;
-    }
-
-    main {
-        padding: 4%;
-    }
-
-    #smbuttonsmobile {
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-        #smbuttonsmobile a {
-            padding: 3%;
-        }
-
-        #smbuttonsmobile span {
-            font-size: 180%;
-        }
-
-        #smbuttonsmobile img {
-            height: 95px;
-        }
-
-    footer {
-        padding: 10%;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
-    header {
-        display: flex;
-        align-items: center;
-        padding: 3%;
-    }
-
-    header #pfp {
-        max-height: 50px;
-    }
-
-    header h2 {
-        font-size: 120%;
-    }
-
-    main {
-        padding: 12%;
-    }
-
-    #smbuttonsmobile a {
-        padding: 1.75%;
-    }
-
-    #smbuttonsmobile span {
-        font-size: 100%;
-    }
-
-    #smbuttonsmobile img {
-        height: 22px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    header {
-        display: flex;
-        align-items: center;
-        padding-top: 12%;
-        padding-bottom: 0;
-    }
-
-    header #pfp {
-        max-height: 150px;
-    }
-
-    header #title {
-        font-size: 275%;
-    }
-
-    main {
-        padding: 5%;
-    }
-
-    #smbuttonsmobile {
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-
-        #smbuttonsmobile a {
-            padding: 3%;
-        }
-
-        #smbuttonsmobile span {
-            font-size: 170%;
-        }
-
-        #smbuttonsmobile img {
-            height: 90px;
-        }
-
-    footer {
-        padding: 10%;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
-    header {
-        display: flex;
-        align-items: center;
-        padding: 3%;
-    }
-
-    header #pfp {
-        max-height: 50px;
-    }
-
-    header h2 {
-        font-size: 120%;
-    }
-
-    main {
-        padding: 15%;
-    }
-
-    #smbuttonsmobile a {
-        padding: 1.75%;
-    }
-
-    #smbuttonsmobile span {
-        font-size: 100%;
-    }
-
-    #smbuttonsmobile img {
-        height: 22px;
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    header {
-        display: flex;
-        align-items: center;
-        padding-top: 25%;
-        padding-bottom: 0;
-    }
-
-    header #pfp {
-        max-height: 175px;
-    }
-
-    header #title {
-        font-size: 275%;
-    }
-
-    main {
-        padding: 6%;
-    }
-
-    #smbuttonsmobile {
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-        #smbuttonsmobile a {
-            padding: 3%;
-        }
-
-        #smbuttonsmobile span {
-            font-size: 180%;
-        }
-
-        #smbuttonsmobile img {
-            height: 95px;
-        }
-
-    footer {
-        padding: 15%;
-    }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1280px) {
-    header {
-        display: flex;
-        align-items: center;
-        padding: 3%;
     }
 
     header #pfp {
         max-height: 75px;
     }
 
-    header h2 {
+    #navbar a {
+        padding: 18px 22px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 80%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #smbuttons {
+        margin-left: 18%;
+        margin-right: 18%;
+        gap: 10px;
+    }
+
+        #smbuttons a {
+            padding: 4%;
+        }
+
+        #smbuttons span {
+            font-size: 100%;
+        }
+
+        #smbuttons img {
+            height: 25px;
+        }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) and (orientation: landscape) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #title {
+        margin-left: 15px;
+        font-size: 160%;
+    }
+
+    header {
+        display: flex;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header #pfp {
+        max-height: 95px;
+    }
+
+    #navbar a {
+        padding: 28px 36px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 115%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #smbuttons {
+        margin-left: 8%;
+        margin-right: 8%;
+        gap: 10px;
+    }
+
+        #smbuttons a {
+            padding: 4%;
+        }
+
+        #smbuttons span {
+            font-size: 115%;
+        }
+
+        #smbuttons img {
+            height: 30px;
+        }
+
+    #mainpage {
         font-size: 150%;
     }
+}
 
-    main {
-        padding: auto;
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #title {
+        margin-left: 0;
+        font-size: 180%;
     }
 
-    #smbuttonsmobile a {
-        padding: 1.75%;
+    header {
+        display: flex;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
-    #smbuttonsmobile span {
-        font-size: 100%;
+    header #pfp {
+        max-height: 145px;
     }
 
-    #smbuttonsmobile img {
-        height: 22px;
+    #title {
+        font-size: 225%;
+        margin-left: 45px;
+    }
+
+    #navbar a {
+        padding: 34px 42px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 160%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #smbuttons {
+        margin-left: 4%;
+        margin-right: 4%;
+        gap: 10px;
+    }
+
+        #smbuttons a {
+            padding: 4%;
+        }
+
+        #smbuttons span {
+            font-size: 110%;
+        }
+
+        #smbuttons img {
+            height: 90px;
+        }
+
+    #mainpage {
+        font-size: 175%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+    #title {
+        margin-left: 15px;
+        font-size: 200%;
+    }
+
+    header {
+        display: flex;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: auto;
+        padding-right: auto;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: left;
+        align-items: center;
+    }
+
+    header #pfp {
+        max-height: 115px;
+    }  
+
+    #navbar {
+        margin: 4%;
+    }
+
+    #navbar a {
+        padding: 30px 38px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 145%;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #smbuttons {
+        margin-left: 2%;
+        margin-right: 2%;
+        gap: 10px;
+    }
+
+        #smbuttons a {
+            padding: 3%;
+        }
+
+        #smbuttons span {
+            font-size: 120%;
+        }
+
+        #smbuttons img {
+            height: 90px;
+        }
+}
+
+/*Temporary*/
+@media only screen and (max-width: 1023px) and (orientation: portrait) {
+    #mobilelandscape {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+    #mobilelandscape {
+        font-size: 5%;
+        text-align: center;
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    #mainpage, #smbuttons, #smbuttons {
+        display: none;
     }
 }
