@@ -25,9 +25,9 @@ p {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align logo and nav with space between them */
+    justify-content: space-between; 
     padding: 2% 2%;
-    width: 100%; /* Ensure header takes full width */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -55,9 +55,9 @@ header {
         align-items: center;
         background-color: cadetblue;
         border-radius: 8px;
-        width: auto; /* Use auto to make it fit the content */
-        flex-wrap: nowrap; /* Prevent wrapping to keep it on one line */
-        margin-left: auto; /* Pushes nav to the right of the header */
+        width: auto;
+        flex-wrap: nowrap;
+        margin-left: auto;
         position: relative;
         z-index: 10;
     }
