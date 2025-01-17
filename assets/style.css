@@ -6,6 +6,7 @@
 :root {
 	--text: #000;
 	--bg: rgb(205, 205, 205);
+    --hovercolor: darkgray;
 }
 
 body, html {
@@ -24,10 +25,9 @@ p {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Align logo and nav with space between them */
     padding: 2% 2%;
-    width: 100%;
-    border-bottom: 1px solid gray;
+    width: 100%; /* Ensure header takes full width */
     box-sizing: border-box;
 }
 
@@ -49,27 +49,86 @@ header {
         margin-left: 10px;
     }
 
-    #navbar {
+    nav {
         display: flex;
+        justify-content: space-around;
+        align-items: center;
         background-color: cadetblue;
         border-radius: 8px;
-        margin: 25px;
+        width: auto; /* Use auto to make it fit the content */
+        flex-wrap: nowrap; /* Prevent wrapping to keep it on one line */
+        margin-left: auto; /* Pushes nav to the right of the header */
+        position: relative;
+        z-index: 10;
     }
 
-        #navbar a {
-            padding: 15px 25px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            color: black;
-            transition: background-color 0.3s, color 0.3s;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+    nav a {
+        padding: 20px 30px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
-        #navbar a:hover {
-            background-color: darkcyan;
-            color: white;
-        }
+    nav a:hover {
+        background-color: darkcyan;
+        color: white;
+    }  
+
+    /* Hamburger icon */
+    #hamburgericon {
+        display: none;
+        cursor: pointer;
+        float: right;
+        clear: right;
+        margin: 0 20px;
+    }
+
+    #hamburgericon div {
+        width: 35px;
+        height: 4px;
+        background-color: lightgray;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Mobile menu - initially hidden */
+    #mobileMenu {
+        display: none;
+        flex-direction: column;
+        background-color: cadetblue;
+        position: absolute;
+        border-radius: 1.75%;
+        top: 16%;
+        width: 75%;
+        z-index: 10;
+    }
+
+    #mobileMenu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #mobileMenu li {
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #mobileMenu a {
+        display: block;
+        padding: 15px;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    #mobileMenu a:hover {
+        background-color: darkcyan;
+        color: white;
+    }
 
 main {
     margin-left: 10%;
@@ -88,12 +147,12 @@ main {
 #smbuttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 20px;
     padding: 0;
     align-items: center;
     justify-content: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
@@ -107,16 +166,21 @@ main {
         border: solid;
         border-radius: 10px;
         border-color: darkslategray;
-        padding: 1.5%;
+        padding: 2%;
         height: auto;
         text-align: center;
         color: var(--text);
     }
 
     #smbuttons img {
-        max-height: 35px;
+        user-select: none;
+        max-height: 30px;
         width: auto;
         margin-right: 10px;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
     }
 
     #smbuttons .bsky {
@@ -126,8 +190,12 @@ main {
     #smbuttons span {
         font-family: 'Product Sans';
         font-weight: 550;
-        font-size: 120%;
+        font-size: 100%;
         color: black;
+    }
+
+    #smbuttons a:hover {
+        background-color: var(--hovercolor);
     }
 
 a {
@@ -170,6 +238,7 @@ footer span {
 	:root {
 	  --text: #fff;
 	  --bg: rgb(35, 35, 35);
+      --hovercolor: dimgray;
 	}
 
     /**/
@@ -197,14 +266,18 @@ footer span {
 
 /* Responsiveness */
 @media only screen and (min-width: 1024px) {
-    #mobilelandscape {
+    #mobilelandscape, #hamburgericon {
         display: none;
     }
 }
 
-@media only screen and (max-width: 1199px) {
-    #notformobiledevices {
+@media only screen and (max-width: 1199px) /*smaller screens*/ {
+    #notformobiledevices, nav {
         display: none;
+    }
+
+    #logoandtitle {
+        float: none;
     }
 }
 
@@ -227,6 +300,14 @@ footer span {
         align-items: center;
         flex-grow: 1;
         width: 100%;
+    }
+
+    nav {
+        display: none; /* Hide desktop menu */
+    }
+
+    #hamburgericon {
+        display: block; /* Show hamburger icon */
     }
 }
 
@@ -251,7 +332,7 @@ footer span {
         margin-right: 0;
     }
 
-    #navbar {
+    nav {
         margin: 0;
     }
 
@@ -259,7 +340,7 @@ footer span {
         font-size: 100%;
     }
 
-    #navbar a {
+    nav a {
         padding: 12px 10px;
         text-align: center;
         text-decoration: none;
@@ -319,11 +400,11 @@ footer span {
         max-height: 55px;
     }
 
-    #navbar {
+    nav {
         margin: 0;
     }
 
-    #navbar a {
+    nav a {
         padding: 16px 14px;
         text-align: center;
         text-decoration: none;
@@ -377,7 +458,7 @@ footer span {
         max-height: 75px;
     }
 
-    #navbar a {
+    nav a {
         padding: 18px 22px;
         text-align: center;
         text-decoration: none;
@@ -431,7 +512,7 @@ footer span {
         max-height: 95px;
     }
 
-    #navbar a {
+    nav a {
         padding: 28px 36px;
         text-align: center;
         text-decoration: none;
@@ -494,8 +575,8 @@ footer span {
         margin-left: 45px;
     }
 
-    #navbar a {
-        padding: 34px 42px;
+    nav a {
+        padding: 30px 38px;
         text-align: center;
         text-decoration: none;
         font-weight: 600;
@@ -515,7 +596,7 @@ footer span {
         }
 
         #smbuttons span {
-            font-size: 110%;
+            font-size: 100%;
         }
 
         #smbuttons img {
@@ -530,7 +611,7 @@ footer span {
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
     #title {
         margin-left: 15px;
-        font-size: 150%;
+        font-size: 140%;
     }
 
     header {
@@ -546,19 +627,16 @@ footer span {
     }
 
     header #pfp {
-        max-height: 90px;
+        max-height: 80px;
     }  
 
-    #navbar {
-        margin: 3%;
-    }
 
-    #navbar a {
-        padding: 18px 28px;
+    nav a {
+        padding: 14px 24px;
         text-align: center;
         text-decoration: none;
         font-weight: 600;
-        font-size: 120%;
+        font-size: 110%;
         color: black;
         transition: background-color 0.3s, color 0.3s;
     }
@@ -570,15 +648,15 @@ footer span {
     }
 
         #smbuttons a {
-            padding: 2%;
+            padding: 1.5%;
         }
 
         #smbuttons span {
-            font-size: 95%;
+            font-size: 85%;
         }
 
         #smbuttons img {
-            max-height: 35px;
+            max-height: 30px;
         }
 }
 
