@@ -28,21 +28,37 @@
 	<link href='https://fonts.googleapis.com/css?family=Cinzel' rel="stylesheet" />
 	<link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/95031835?v=4" />
+	<script src="/assets/script/script.js" defer></script>
 </head>
 <body>
 	<!--Header-->
 	<header>
-		<div id="logoandtitle">
-		  <img src="https://avatars.githubusercontent.com/u/95031835?v=4" alt="My profile picture" id="pfp" />
-		  <h2 id="title">Jacob Nicked</h2>
-		</div>
-	</header>
-	<div id="navbar">
-		<a href="/../index.html">Home</a>
-		<a href="/../aboutme.html">About me</a>
-		<a href="/../socialmedia.html">Social media</a>
-		<a href="/../playlists.html">Playlists</a>
-	</div>
+        <div id="logoandtitle">
+            <img src="https://avatars.githubusercontent.com/u/95031835?v=4" alt="My profile picture" id="pfp" />
+            <h2 id="title">Jacob Nicked</h2>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/../aboutme.html">About me</a>
+            <a href="/../socialmedia.html">Social media</a>
+            <a href="/../playlists.html">Playlists</a>
+            <a href="/../tutorials.html">Tutorials</a>
+        </nav>
+        <div id="hamburgericon" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="mobileMenu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/../aboutme.html">About me</a></li>
+                <li><a href="/../socialmedia.html">Social media</a></li>
+                <li><a href="/../playlists.html">Playlists</a></li>
+                <li><a href="/../tutorials.html">Tutorials</a></li>
+            </ul>
+        </div>
+    </header>
 	<!--Main-->
 	<main>
         <div id="mainpage">
