@@ -20,6 +20,10 @@ body, html {
     flex-direction: column;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;  
