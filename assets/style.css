@@ -381,7 +381,7 @@ footer span {
 @media only screen and (min-width: 360px) and (max-width: 599px) {
     #title {
         margin-left: 5px;
-        font-size: 130%;
+        font-size: 120%;
     }
 
     header {
@@ -397,26 +397,12 @@ footer span {
     }
 
     header #pfp {
-        max-height: 55px;
-    }
-
-    nav {
-        margin: 0;
-    }
-
-    nav a {
-        padding: 16px 14px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 70%;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
+        max-height: 45px;
     }
 
     #smbuttons {
-        margin-left: 6%;
-        margin-right: 6%;
+        margin-left: 4%;
+        margin-right: 4%;
         gap: 10px;
     }
 
@@ -458,16 +444,6 @@ footer span {
         max-height: 75px;
     }
 
-    nav a {
-        padding: 18px 22px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 80%;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
     #smbuttons {
         margin-left: 18%;
         margin-right: 18%;
@@ -479,7 +455,7 @@ footer span {
         }
 
         #smbuttons span {
-            font-size: 100%;
+            font-size: 90%;
         }
 
         #smbuttons img {
@@ -510,16 +486,6 @@ footer span {
 
     header #pfp {
         max-height: 95px;
-    }
-
-    nav a {
-        padding: 28px 36px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 115%;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
     }
 
     #smbuttons {
@@ -567,32 +533,22 @@ footer span {
     }
 
     header #pfp {
-        max-height: 145px;
+        max-height: 100px;
     }
 
     #title {
-        font-size: 225%;
+        font-size: 200%;
         margin-left: 45px;
     }
 
-    nav a {
-        padding: 30px 38px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 160%;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
     #smbuttons {
-        margin-left: 4%;
-        margin-right: 4%;
+        margin-left: 3%;
+        margin-right: 3%;
         gap: 10px;
     }
 
         #smbuttons a {
-            padding: 4%;
+            padding: 2%;
         }
 
         #smbuttons span {
@@ -678,4 +634,8 @@ footer span {
     #smbuttons, #smbuttons {
         display: none;
     }
+}
+
+#mobilelandscape {
+    text-align: center;
 }
