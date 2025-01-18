@@ -7,6 +7,7 @@
 	--text: #000;
 	--bg: rgb(205, 205, 205);
     --hovercolor: darkgray;
+    --headercolor: dimgray;
 }
 
 body, html {
@@ -15,6 +16,8 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -23,12 +26,16 @@ p {
 }
 
 header {
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: space-between; 
     padding: 2% 2%;
     width: 100%;
+    top: 0;
     box-sizing: border-box;
+    position: sticky;
+    z-index: 10;
 }
 
     #logoandtitle {
@@ -120,7 +127,7 @@ header {
 
     #mobileMenu a {
         display: block;
-        padding: 15px;
+        padding: 4%;
         color: black;
         text-decoration: none;
         font-weight: 600;
@@ -135,6 +142,7 @@ main {
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
+    flex: 1;
 }
 
 #mainpage {
@@ -204,31 +212,24 @@ a {
     color: darkslategray;
 }
 
-#note {
-    background-color: yellow;
-    padding: 15px;
-    text-align: center;
-    border-top: 5px dashed black;
-    border-bottom: 5px dashed black;
-    width: 100%;
-}
-
-#note span {
-    color: var(--text);
-}
-
 footer {
-    padding: 25px;
+    background-color: cadetblue;
+    display: flex;
+    padding: 1%;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
-    color: white;
     clear: both;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
 }
 
-footer span {
-    color: white;
-}
+    footer span {
+        color: white;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
 #tut {
     text-align: left;
@@ -265,6 +266,8 @@ footer span {
 	}
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 /* Responsiveness */
 @media only screen and (min-width: 1024px) {
     #mobilelandscape, #hamburgericon {
@@ -279,6 +282,10 @@ footer span {
 
     #logoandtitle {
         float: none;
+    }
+
+    footer {
+        width: 100%;
     }
 }
 
@@ -323,32 +330,26 @@ footer span {
         align-items: center;
     }
 
-    #title {
-        font-size: 110%;
-        margin-left: 15px;
-    }
+        #title {
+            font-size: 110%;
+            margin-left: 15px;
+        }
 
-    #pfp {
-        max-height: 35px;
-        margin-right: 0;
-    }
+        #pfp {
+            max-height: 35px;
+            margin-right: 0;
+        }
+        
+        #mobileMenu {
+            top: 120%;
+        }
 
-    nav {
-        margin: 0;
-    }
+            #mobileMenu li {
+                font-size: 70%;
+            }
 
     #mainpage {
         font-size: 100%;
-    }
-
-    nav a {
-        padding: 12px 10px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 70%;
-        color: black;
-        transition: background-color 0.3s, color 0.3s;
     }
 
     #mainpage h2 {
@@ -374,17 +375,15 @@ footer span {
         }
 
     footer {
-        padding: 3%;
-        width: auto;
+        padding: 2%;
     }
+
+        footer span {
+            font-size: 60%;
+        }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 599px) {
-    #title {
-        margin-left: 5px;
-        font-size: 120%;
-    }
-
     header {
         display: flex;
         padding-top: 10%;
@@ -397,13 +396,26 @@ footer span {
         align-items: center;
     }
 
-    header #pfp {
-        max-height: 45px;
-    }
+        header #pfp {
+            max-height: 40px;
+        }
+
+        #title {
+            margin-left: 5px;
+            font-size: 110%;
+        }
+
+        #mobileMenu {
+            top: 100%;
+        }
+
+            #mobileMenu li {
+                font-size: 100%;
+            }
 
     #smbuttons {
-        margin-left: 4%;
-        margin-right: 4%;
+        margin-left: 4.5%;
+        margin-right: 4.5%;
         gap: 10px;
     }
 
@@ -412,11 +424,19 @@ footer span {
         }
 
         #smbuttons span {
-            font-size: 80%;
+            font-size: 60%;
         }
 
         #smbuttons img {
             height: 20px;
+        }
+    
+    footer {
+        padding: 2%;
+    }
+
+        footer span {
+            font-size: 75%;
         }
 }
 
@@ -485,9 +505,21 @@ footer span {
         align-items: center;
     }
 
-    header #pfp {
-        max-height: 95px;
+        header #pfp {
+            max-height: 120px;
+        }
+
+        header #title {
+            font-size: 180%;
+        }
+
+    #mobileMenu {
+        top: 100%;
     }
+
+        #mobileMenu li {
+            font-size: 140%;
+        }
 
     #smbuttons {
         margin-left: 8%;
@@ -496,7 +528,7 @@ footer span {
     }
 
         #smbuttons a {
-            padding: 4%;
+            padding: 3%;
         }
 
         #smbuttons span {
