@@ -239,6 +239,11 @@ footer {
     text-align: left;
 }
 
+.unavailablecontent {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
 	:root {
