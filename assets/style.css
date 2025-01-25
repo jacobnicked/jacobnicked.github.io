@@ -227,6 +227,8 @@ footer {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    pointer-events: none;
+    user-select: none;
 }
 
     footer span {
